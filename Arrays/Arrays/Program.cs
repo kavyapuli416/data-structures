@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Arrays
 {
-    public class Program
+    public class Program:Reverse
     {
         //  Write a program to take 5 numbers as input and print them.
 
         public void PrintNums()
         {
             int[] arr = new int[5];
-
+            
             Console.WriteLine("Enter 5 numbers:");
             for (int i = 0; i < arr.Length; i++)
             {
@@ -25,6 +25,7 @@ namespace Arrays
             for (int i = 0; i < arr.Length; i++)
             {
                 Console.WriteLine(arr[i]);
+
             }
         }
 
@@ -45,9 +46,11 @@ namespace Arrays
         }
         static void Main(string[] args)
         {
-            Program p = new Program();
-            p.PrintNums();
-            p.MaxNum();
+           // Program p = new Program();
+            Reverse r = new Reverse();
+           //p.PrintNums();
+           // p.MaxNum();
+            r.reverse();
 
             // 🔹 Keeps console open until user presses Enter
             Console.ReadLine();
